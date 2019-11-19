@@ -13,6 +13,7 @@
 // limitations under the License.
 
 let initialState = {
+    snapToGrid: true,
     renderLaTeX: true,
     selectedNodes: [],
     draggingNode: false,
@@ -39,7 +40,7 @@ let initialState = {
                 {name: null, angle: Math.PI / 2, position: [0, 0]},
                 {name: null, angle: Math.PI, position: [0, 0]},
             ],
-            position: {x: 367, y: 300},
+            position: {x: 370, y: 300},
             rotation: 0,
             hue: 30
         },
@@ -52,7 +53,7 @@ let initialState = {
                 {name: null, angle: Math.PI / 2, position: [0, 0]},
                 {name: null, angle: Math.PI, position: [0, 0]},
             ],
-            position: {x: 533, y: 300},
+            position: {x: 540, y: 300},
             rotation: 0,
             hue: 30
         },
@@ -65,7 +66,7 @@ let initialState = {
                 {name: null, angle: Math.PI / 2, position: [0, 0]},
                 {name: null, angle: Math.PI, position: [0, 0]},
             ],
-            position: {x: 700, y: 300},
+            position: {x: 710, y: 300},
             rotation: 0,
             hue: 30
         }

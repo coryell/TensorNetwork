@@ -136,9 +136,22 @@ Vue.component(
                 return false;
             }
         },
+        computed: {
+            grid: function() {
+                let points = [];
+                for (let x = 10; x < 900; x += 10) {
+                    for (let y = 10; y < 600; y += 10) {
+                        points.push({x: x, y: y});
+                    }
+                }
+                console.log(points.length);
+                return points;
+            }
+        },
 		template: `
 			<svg class="workspace" id="workspace" xmlns="http://www.w3.org/2000/svg"
 			    :width="width" :height="height" @mousedown="onMouseDown">
+			    <circle v-for="point in grid" :cx="point.x" :cy="point.y" r="1" stroke="none" fill="#ddd" />
                 <proto-edge v-if="protoEdge.dragging" :x="protoEdge.x" :y="protoEdge.y"
 				    :node="protoEdge.node" :axis="protoEdge.axis" />
 				<edge v-for="edge in state.edges" :edge="edge" :state="state" /> 
